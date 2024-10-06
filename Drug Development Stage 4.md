@@ -1,7 +1,5 @@
 ---
-subtitle: "[]{#_jc57v8w5yenv .anchor}**Scientific paper reproduction:
-  Machine Learning Prediction of Cancer Cell Sensitivity to Drugs Based
-  on Genomic and Chemical Properties**"
+Scientific paper reproduction: Machine Learning Prediction of Cancer Cell Sensitivity to Drugs Based on Genomic and Chemical Properties
 ---
 
 **Authors: Ntsieni Midalo Shaka, Twana Lwethu, Owoloye Babatunde Henry**
@@ -47,45 +45,14 @@ useful in designing experiments with balanced coverage and accuracy.
 **ML METHODOLOGY:**
 
 To begin training the model onto the data, we need to import the xlsx
-file named "[**GDSC1_fitted_dose_response_27Oct23"**and make a dataframe
-of the information. It is important to clean and curate data by removing
-missing values by dropping NaN, removing duplicate rows, and converting
-columns to appropriate data types. To select the cell line name of
-interest which in this instance is "SK-MEL-2" due to 378 entries, it is
-important to choose a cell line name with many entries for better
-performance and results from the model. The data frame is then
-manipulated to show the four important columns: CELL_LINE_NAME,
-TCGA_DESC, DRUG_NAME, and LN_IC50. SMILES of the drug names were
-generated from the PubChem database and further cleaned with the
-function .dropna.The sorted dataframe and the SMILES dataframe were
-concatenated and descriptors were generated to yield "df_final" data
-frame.Test data is then generated from the whole data for model
-evaluation purposes.]{.mark}
+file named “GDSC1_fitted_dose_response_27Oct23”and make a dataframe of the information. It is important to clean and curate data by removing missing values by dropping NaN, removing duplicate rows, and converting columns to appropriate data types. To select the cell line name of interest which in this instance is “SK-MEL-2” due to 378 entries, it is important to choose a cell line name with many entries for better performance and results from the model. The data frame is then manipulated to show the four important columns: CELL_LINE_NAME, TCGA_DESC, DRUG_NAME, and LN_IC50. SMILES of the drug names were generated from the PubChem database and further cleaned with the function .dropna.The sorted dataframe and the SMILES dataframe were concatenated and descriptors were generated to yield “df_final” data frame.Test data is then generated from the whole data for model evaluation purposes.
 
-[To identify a model that would work well with our data, we trained the
-Pycaret model.**Ridge Regression**. It provides the best performance in
-MSE and RMSE, with a solid balance of accuracy and efficiency.The model
-balances the bias-variance trade-off while minimising significant errors
-(MSE and RMSE). It prevents overfitting and lessens the effect of
-extreme values by adding a regularisation component to the loss
-function. Ridge also prevents overfitting by shrinking the coefficients
-of less significant features. Because of its rapid computing efficiency,
-it can be used for frequent retraining or with big datasets. Because its
-regularisation stabilises the model against little fluctuations in the
-data, it works well in ill-conditioned situations like
-multicollinearity. Ridge Regression strikes a balance between error
-minimization and model simplicity, resulting in smoother and
-easier-to-understand output---even though it does not have the lowest
-error for every statistic.]{.mark}
+To identify a model that would work well with our data, we trained the Pycaret model.Ridge Regression. It provides the best performance in MSE and RMSE, with a solid balance of accuracy and efficiency.The model  balances the bias-variance trade-off while minimising significant errors (MSE and RMSE). It prevents overfitting and lessens the effect of extreme values by adding a regularisation component to the loss function. Ridge also prevents overfitting by shrinking the coefficients of less significant features. Because of its rapid computing efficiency, it can be used for frequent retraining or with big datasets. Because its  regularisation stabilises the model against little fluctuations in the data, it works well in ill-conditioned situations like multicollinearity. Ridge Regression strikes a balance between error minimization and model simplicity, resulting in smoother and easier-to-understand output—even though it does not have the lowest error for every statistic.
 
-[The ridge regression model was then evaluated using the test data set
-yielding the output:]{.mark}
-
-[Mean Squared Error (MSE): 8.5540]{.mark}
-
-[R-squared (R2): -0.0182]{.mark}
-
-[Mean Absolute Error (MAE): 2.2066]{.mark}
+The ridge regression model was then evaluated using the test data set yielding the output:
+Mean Squared Error (MSE): 8.5540
+R-squared (R2): -0.0182
+Mean Absolute Error (MAE): 2.2066
 
 **RESULTS:**
 
@@ -97,10 +64,10 @@ to the model\'s high MSE and negative R2.
 According to MAE, there is a moderate level of error in the model\'s
 predictions, with an average deviation of 2.2 units.
 
-![](./image4.png){width="6.267716535433071in"
-height="5.027777777777778in"}
+![image4](https://github.com/user-attachments/assets/b23295ee-485a-45c0-be56-cdf16a45fa83)
 
-[Correlation Coefficient: 0.2679]{.mark}
+
+Correlation Coefficient: 0.2679
 
 The model is predicting IC50 rather well for many cases, as evidenced by
 the majority of data points falling along a diagonal line (predicted and
@@ -145,15 +112,7 @@ higher correlation coefficient, which is 0.85 for the majority of data
 and 0.82 for unknown cell lines.
 
 **CONCLUSION:**
-
-[The model\'s performance is poor in predicting IC50 values, with high
-error values and weak correlations. Menden et al.\'s model, using neural
-networks and random forests, performed significantly better, showing
-higher predictive power, strong correlations, lower errors, and better
-fit, as indicated by a high R².When compared to the findings in Menden
-et al., our model\'s predictive performance is noticeably worse,
-indicating that the model, features, or data size selection may be
-improved.]{.mark}
+The model's performance is poor in predicting IC50 values, with high error values and weak correlations. Menden et al.'s model, using neural networks and random forests, performed significantly better, showing higher predictive power, strong correlations, lower errors, and better fit, as indicated by a high R².When compared to the findings in Menden et al., our model's predictive performance is noticeably worse, indicating that the model, features, or data size selection may be improved.
 
 **REFERENCE LIST:**
 
@@ -208,8 +167,8 @@ water molecules and bound ligands/heteroatoms were removed\[4\].
 Hydrogen atoms were then added to the cleaned structure, which was
 subsequently saved in PDB format for further analysis\[1\].
 
-![](./image2.png){width="5.263803587051618in"
-height="3.282209098862642in"}
+![image2](https://github.com/user-attachments/assets/d2462d3f-a94d-4b8b-917e-e7971de62559)
+
 
 Figure 1: Preparation of the HDAC11 protein structure for docking using
 Biovia Studio. The figure shows the cleaned protein with water molecules
@@ -239,8 +198,8 @@ the high binding affinity observed in some trials.
 
 **VISUALISATION OF THE LUPEOL LIGAND:**
 
-![](./image1.png){width="5.312883858267717in"
-height="3.325153105861767in"}
+![image1](https://github.com/user-attachments/assets/4ba00cdd-d953-408a-81a6-093dabc3d7c8)
+
 
 Figure 3: [Visualisation of]{.mark} *Lupeol* [docked within the active
 site of HDAC11, generated using Biovia Discovery Studio.]{.mark}
@@ -249,8 +208,8 @@ site of HDAC11, generated using Biovia Discovery Studio.]{.mark}
 mode to HDAC11, providing valuable understanding of their molecular
 interactions.]{.mark}
 
-![](./image3.png){width="6.267716535433071in"
-height="3.3194444444444446in"}
+![image3](https://github.com/user-attachments/assets/e33a998d-f03d-4b60-9edc-818065659f67)
+
 
 [Figure 4: Interaction diagrams of Lupeol with HDAC11, featuring a 3D
 visualisation on the left that illustrates the ligand\'s conformational
